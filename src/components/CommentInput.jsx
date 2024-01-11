@@ -6,9 +6,11 @@ export default function CommentInput({ onContentInput, onAddComment }) {
       <div className="text-lg font-semibold">Beri Komentar</div>
       <div className="my-4">
         <div
+          data-testid="comment-input"
           className="border-2 border-gray-700 p-2 mb-4 h-52 rounded-md"
           contentEditable
           onInput={onContentInput}
+          id="comment-input"
         ></div>
         <button
           onClick={onAddComment}
