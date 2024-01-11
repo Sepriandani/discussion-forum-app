@@ -12,8 +12,8 @@ import {
 } from '../states/threadDetail/action'
 import NotFoundPage from './NotFoundPage'
 import ThreadDetail from '../components/ThreadDetail'
-import CommentsList from '../components/commentsList'
 import CommentInput from '../components/CommentInput'
+import CommentsList from '../components/CommentsList'
 
 export default function DetailThreadPage() {
   const { threadId } = useParams()
