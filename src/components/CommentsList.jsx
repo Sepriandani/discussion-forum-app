@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import CommentItem, { commentShape } from './commentItem'
+import CommentItem, { commentShape } from './CommentItem'
 
 export default function CommentsList({
   comments,
