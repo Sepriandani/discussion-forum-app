@@ -6,16 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint ./src --ext .jsx --ext .js",
     "format": "prettier --write .",
     "preview": "vite preview",
     "test": "vitest",
     "e2e": "cypress run",
-    "ci:test": "vitest --no-watch && start-server-and-test dev http-get://0.0.0.0:5173 e2e"
+    "ci:test": "vitest --no-watch && start-server-and-test dev http://localhost:5173/ e2e"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "html-react-parser": "^5.0.11",
+    "nanoid": "^5.0.4",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

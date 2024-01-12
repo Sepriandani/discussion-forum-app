@@ -1,5 +1,6 @@
-import ThreadItem from './ThreadItem'
+import React from 'react'
 import PropTypes from 'prop-types'
+import ThreadItem from './ThreadItem'
 
 export default function ThreadsList({ threads, upVoteBy, downVoteBy }) {
   return (

@@ -1,3 +1,5 @@
+import React from 'react'
+
 export default function NotFoundPage() {
   return (
     <div className="flex h-96 items-center justify-center ">

@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function LeaderboardItem({ user, score }) {
@@ -8,7 +9,7 @@ export default function LeaderboardItem({ user, score }) {
           className="inline-block h-10 w-10 rounded-full ring-2 ring-white"
           src={user.avatar}
           alt="Avatar"
-        ></img>
+        />
         <p>{user.name}</p>
       </div>
       <p>{score}</p>

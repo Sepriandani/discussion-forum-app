@@ -1,6 +1,7 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import useInput from '../hooks/useInput'
-import PropTypes from 'prop-types'
 
 export default function RegisterForm({ register }) {
   const [name, onNameChange] = useInput('')
@@ -14,9 +15,6 @@ export default function RegisterForm({ register }) {
           Yuk Daftar Dulu
         </h1>
         <form className="flex flex-col">
-          <label className="mb-2" htmlFor="name">
-            Name
-          </label>
           <input
             value={name}
             onChange={onNameChange}
@@ -25,9 +23,6 @@ export default function RegisterForm({ register }) {
             id="name"
             placeholder="Name"
           />
-          <label className="mb-2" htmlFor="email">
-            Email
-          </label>
           <input
             value={email}
             onChange={onEmailChange}
@@ -36,9 +31,6 @@ export default function RegisterForm({ register }) {
             id="email"
             placeholder="Email"
           />
-          <label className="mb-2" htmlFor="password">
-            Password
-          </label>
           <input
             value={password}
             onChange={onPasswordChange}

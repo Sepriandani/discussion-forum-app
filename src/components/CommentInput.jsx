@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function CommentInput({ onContentInput, onAddComment }) {
@@ -6,10 +7,12 @@ export default function CommentInput({ onContentInput, onAddComment }) {
       <div className="text-lg font-semibold">Beri Komentar</div>
       <div className="my-4">
         <div
+          data-testid="comment-input"
           className="border-2 border-gray-700 p-2 mb-4 h-52 rounded-md"
           contentEditable
           onInput={onContentInput}
-        ></div>
+          id="comment-input"
+        />
         <button
           onClick={onAddComment}
           className="bg-indigo-400 rounded-sm w-full p-2 text-white font-semibold"

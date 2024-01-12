@@ -5,12 +5,12 @@
  */
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
+import { hideLoading, showLoading } from 'react-redux-loading-bar'
 import api from '../../utils/api'
 import {
   asyncPopulateLeaderboards,
   receiveLeaderboardsActionCreator,
 } from './action'
-import { hideLoading, showLoading } from 'react-redux-loading-bar'
 
 const fakeLeaderboardsResponse = [
   {

@@ -1,9 +1,10 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import parse from 'html-react-parser'
+import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
 import ShareVoteButton from './ShareVoteButton'
 import postedAt from '../utils'
-import PropTypes from 'prop-types'
 import VoteButton from './VoteButton'
-import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
 
 export default function ThreadDetail({
   id,
@@ -79,9 +80,8 @@ ThreadDetail.propTypes = {
   downVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
   upVoteThreadDetail: PropTypes.func.isRequired,
   downVoteThreadDetail: PropTypes.func.isRequired,
-  owner: PropTypes.shape(userShape),
+  owner: PropTypes.shape(userShape).isRequired,
   authUser: PropTypes.string.isRequired,
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export { userShape }

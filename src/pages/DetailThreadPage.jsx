@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import {

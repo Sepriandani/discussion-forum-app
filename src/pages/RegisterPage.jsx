@@ -1,7 +1,8 @@
+import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
 import HeroImage from '../components/HeroImage'
 import RegisterForm from '../components/RegiterForm'
-import { useDispatch } from 'react-redux'
 import { asyncRegisterUser } from '../states/users/action'
 
 export default function RegisterPage() {

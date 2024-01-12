@@ -1,10 +1,11 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import parse from 'html-react-parser'
 import { useNavigate } from 'react-router-dom'
+import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
 import postedAt from '../utils'
-import PropTypes from 'prop-types'
 import ShareVoteButton from './ShareVoteButton'
 import VoteButton from './VoteButton'
-import { BiDislike, BiLike, BiSolidDislike, BiSolidLike } from 'react-icons/bi'
 
 export default function ThreadItem({
   id,
@@ -77,7 +78,7 @@ export default function ThreadItem({
         <div>{totalComments} komentar</div>
         <div>{postedAt(createdAt)}</div>
         <div>
-          Dibuat oleh <strong>{owner}</strong>
+          Dibuat oleh <strong>{owner.name}</strong>
         </div>
       </div>
     </div>
@@ -90,7 +91,7 @@ const threadItemShape = {
   body: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
-  owner: PropTypes.string.isRequired,
+  owner: PropTypes.object.isRequired,
   upVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
   downVotesBy: PropTypes.arrayOf(PropTypes.string).isRequired,
   totalComments: PropTypes.number.isRequired,
@@ -101,5 +102,4 @@ ThreadItem.propTypes = {
   authUser: PropTypes.string.isRequired,
 }
 
-// eslint-disable-next-line react-refresh/only-export-components
 export { threadItemShape }

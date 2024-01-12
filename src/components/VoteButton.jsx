@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function VoteButton({ voteBy, votesBy, onVoteClick, icon }) {
@@ -17,7 +18,7 @@ export default function VoteButton({ voteBy, votesBy, onVoteClick, icon }) {
 
 VoteButton.propTypes = {
   voteBy: PropTypes.func.isRequired,
-  votesBy: PropTypes.array,
+  votesBy: PropTypes.array.isRequired,
   onVoteClick: PropTypes.func.isRequired,
   icon: PropTypes.any.isRequired,
 }

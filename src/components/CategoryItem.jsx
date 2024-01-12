@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function CategoryItem({
@@ -25,5 +26,5 @@ export default function CategoryItem({
 CategoryItem.propTypes = {
   category: PropTypes.string.isRequired,
   isSelected: PropTypes.bool.isRequired,
-  onCategoryChange: PropTypes.func,
+  onCategoryChange: PropTypes.func.isRequired,
 }
