@@ -1,7 +1,8 @@
-import CustomLink from './CustomLink'
+import React from 'react'
 import PropTypes from 'prop-types'
+import CustomLink from './CustomLink'
 
-const MenuItem = ({ name, path, icon, location }) => {
+function MenuItem({ name, path, icon, location }) {
   return (
     <CustomLink to={path} location={location}>
       {icon} {name}

@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Categories from '../components/Categories'
 import ThreadsList from '../components/ThreadsList'
@@ -5,7 +6,6 @@ import {
   asyncDownVoteThread,
   asyncUpVoteThread,
 } from '../states/threads/action'
-import { useEffect, useState } from 'react'
 import asyncPopulateUsersAndThreads from '../states/shared/action'
 
 export default function ThreadsPage() {
@@ -35,7 +35,7 @@ export default function ThreadsPage() {
   const threadsList = threads.map((thread) => ({
     ...thread,
     authUser: authUser.id,
-    owner: users.find((user) => user.id === thread.ownerId)?.name || null,
+    owner: users.find((user) => user.id === thread.ownerId),
   }))
 
   const filteredThreads =

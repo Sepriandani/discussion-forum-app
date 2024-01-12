@@ -1,3 +1,4 @@
+import React from 'react'
 import PropTypes from 'prop-types'
 
 export default function ThreadInput({
@@ -34,7 +35,7 @@ export default function ThreadInput({
           onChange={onBodyChange}
           className="p-2 border-2 border-gray-400 rounded-md"
           rows="10"
-        ></textarea>
+        />
         <button
           className="p-2 bg-indigo-400 text-white rounded-md"
           type="submit"

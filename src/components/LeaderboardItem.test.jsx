@@ -1,9 +1,10 @@
 /**
- * skenario test CommentInput Component
+ * skenario test LeaderboardItem Component
  *   - should render LeaderboardItem with user information and score
  *   - should display the correct score
  */
 
+import React from 'react'
 import { describe, it, expect } from 'vitest'
 import { render } from '@testing-library/react'
 import LeaderboardItem from './LeaderboardItem'

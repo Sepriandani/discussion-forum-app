@@ -1,8 +1,9 @@
-import { LoadingBar } from 'react-redux-loading-bar'
+import React from 'react'
+import LoadingBar from 'react-redux-loading-bar'
 
 export default function Loading() {
   return (
-    <div>
+    <div className="sticky top-0 z-[9999] w-screen">
       <LoadingBar />
     </div>
   )

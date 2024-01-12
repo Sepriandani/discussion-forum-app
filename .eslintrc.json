@@ -5,12 +5,25 @@
     "node": true,
     "cypress/globals": true
   },
-  "extends": ["airbnb-base", "plugin:prettier/recommended"],
-  "plugins": ["prettier", "cypress"],
+  "extends": [
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:react/recommended"
+  ],
+  "plugins": ["prettier", "cypress", "react"],
   "rules": {
     "prettier/prettier": "error",
     "no-alert": "off",
     "no-undef": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/forbid-prop-types": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ]
   }
 }

@@ -1,6 +1,7 @@
+import React from 'react'
+import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import useInput from '../hooks/useInput'
-import PropTypes from 'prop-types'
 
 export default function LoginForm({ login }) {
   const [email, onEmailChange] = useInput('')
@@ -9,13 +10,10 @@ export default function LoginForm({ login }) {
   return (
     <div className="flex-1">
       <div className="mx-16 p-8 shadow-md rounded-md">
-        <h1 className="text-center text-2xl font-semibold mb-16">
+        <h1 className="text-center text-2xl font-semibold mb-10">
           Silahkan Login
         </h1>
         <form className="flex flex-col">
-          <label className="mb-2" htmlFor="email">
-            Email
-          </label>
           <input
             value={email}
             onChange={onEmailChange}
@@ -25,9 +23,6 @@ export default function LoginForm({ login }) {
             aria-label="email-input"
             placeholder="Email"
           />
-          <label className="mb-2" htmlFor="password">
-            Password
-          </label>
           <input
             value={password}
             onChange={onPasswordChange}

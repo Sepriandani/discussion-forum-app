@@ -5,12 +5,13 @@
  *   - should call login function when login button is clicked
  */
 
+import React from 'react'
 import { describe, it, afterEach, expect, vi } from 'vitest'
-import { cleanup, render, screen } from '@testing-library/react'
+import { cleanup, render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import matchers from '@testing-library/jest-dom/matchers'
-import LoginForm from './LoginForm'
 import { MemoryRouter } from 'react-router-dom'
+import LoginForm from './LoginForm'
 
 expect.extend(matchers)
 
